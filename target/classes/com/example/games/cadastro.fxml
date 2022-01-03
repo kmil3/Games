@@ -5,10 +5,11 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="522.0" prefWidth="600.0" style="-fx-background-color: #fdfffc;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="600.0" style="-fx-background-color: #fdfffc;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.games.Controller">
    <children>
       <Label fx:id="t" layoutX="118.0" prefHeight="32.0" prefWidth="333.0" text="Cadastro de">
          <font>
@@ -32,29 +33,32 @@
          </font>
       </Label>
       <TextField fx:id="text_desenvol" layoutX="121.0" layoutY="134.0" prefHeight="25.0" prefWidth="359.0" />
-      <Pane layoutX="14.0" layoutY="308.0" prefHeight="203.0" prefWidth="291.0" style="-fx-background-color: #77af9c;">
+      <Pane layoutX="14.0" layoutY="308.0" prefHeight="212.0" prefWidth="291.0" style="-fx-background-color: #77af9c;">
          <children>
             <RadioButton fx:id="btn_moba" layoutX="22.0" layoutY="46.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="92.0" text="MOBA" textFill="WHITE">
                <font>
                   <Font size="13.0" />
                </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="group" />
+               </toggleGroup>
             </RadioButton>
             <Label fx:id="t111" layoutX="22.0" layoutY="14.0" prefHeight="32.0" prefWidth="122.0" text="G Ê N E R O" textFill="WHITE">
                <font>
                   <Font name="Arial" size="20.0" />
                </font>
             </Label>
-            <RadioButton fx:id="btn_rpg" layoutX="22.0" layoutY="84.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="92.0" text="RPG" textFill="WHITE">
+            <RadioButton fx:id="btn_rpg" layoutX="22.0" layoutY="84.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="92.0" text="RPG" textFill="WHITE" toggleGroup="$group">
                <font>
                   <Font size="13.0" />
                </font>
             </RadioButton>
-            <RadioButton fx:id="btn_puzzle" layoutX="22.0" layoutY="122.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="92.0" text="PUZZLE" textFill="WHITE">
+            <RadioButton fx:id="btn_puzzle" layoutX="22.0" layoutY="122.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="92.0" text="PUZZLE" textFill="WHITE" toggleGroup="$group">
                <font>
                   <Font size="13.0" />
                </font>
             </RadioButton>
-            <RadioButton fx:id="btn_fps" layoutX="22.0" layoutY="160.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="92.0" text="FPS" textFill="WHITE">
+            <RadioButton fx:id="btn_fps" layoutX="22.0" layoutY="160.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="92.0" text="FPS" textFill="WHITE" toggleGroup="$group">
                <font>
                   <Font size="13.0" />
                </font>
@@ -67,7 +71,7 @@
             <Font name="Arial" size="15.0" />
          </font>
       </Label>
-      <Button layoutX="319.0" layoutY="470.0" mnemonicParsing="false" onAction="#cadastrar" prefHeight="38.0" prefWidth="128.0" style="-fx-background-color: #77af9c;" text="Cadastrar" textFill="WHITE" />
-      <Button layoutX="458.0" layoutY="470.0" mnemonicParsing="false" onAction="#voltar" prefHeight="38.0" prefWidth="128.0" style="-fx-background-color: #77af9c;" text="Voltar" textFill="WHITE" />
+      <Button layoutX="319.0" layoutY="478.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="128.0" style="-fx-background-color: #77af9c;" text="Cadastrar" textFill="WHITE" />
+      <Button layoutX="456.0" layoutY="478.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="128.0" style="-fx-background-color: #77af9c;" text="Voltar" textFill="WHITE" />
    </children>
 </Pane>

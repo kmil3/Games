@@ -31,13 +31,16 @@ public class Controller implements Initializable {
 
     }
 
+    public void voltar(){}
+
+
     //código pra salvar em txt, só adaptar//
     public void add_dados() throws IOException {
         String nome = text_nome.getText();
         String desenvol = text_desenvol.getText ();
         String dataGame = ((ToggleButton) data.getDayCellFactory()).getText();
         String op = ((RadioButton) group.getSelectedToggle()).getText();
-        String stringTodos = "resposta";
+        String stringTodos = "Nome do jogo: " + nome + "\n" + "Desenvolvido por: " + desenvol + "\n" + "Data de lançamento: " + dataGame + "\n" + "Gênero: " + op + "\n";
         try {
             File arq = new File ("pesquisa.txt");
             if (arq.createNewFile ()) {

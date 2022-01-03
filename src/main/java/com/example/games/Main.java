@@ -14,7 +14,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("cadastro.fxml"));
         primaryStage.setTitle("Cadastro");
-        primaryStage.setScene(new Scene(root, 600, 488));
+        primaryStage.setScene(new Scene(root, 600, 530));
         primaryStage.show();
     }
 
