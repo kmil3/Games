@@ -1,41 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="488.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="488.0" prefWidth="600.0" style="-fx-background-color: #fdfffc;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TextArea layoutX="261.0" layoutY="107.0" prefHeight="6.0" prefWidth="162.0" />
-      <Label layoutX="187.0" layoutY="31.0" prefHeight="32.0" prefWidth="257.0" text="CADASTRO DE GAMES">
+      <Label fx:id="t" layoutX="150.0" prefHeight="32.0" prefWidth="333.0" text="Cadastro" textFill="#3c096c">
+         <font>
+            <Font name="Bodoni MT Condensed" size="73.0" />
+         </font>
+      </Label>
+      <Label layoutX="292.0" layoutY="72.0" prefHeight="32.0" prefWidth="170.0" text="D E  G A M E S " textFill="#3c096c">
          <font>
             <Font name="Arial" size="22.0" />
          </font>
       </Label>
-      <Button layoutX="204.0" layoutY="411.0" mnemonicParsing="false" text="CADASTRAR" />
-      <Button layoutX="331.0" layoutY="411.0" mnemonicParsing="false" text="EXIBIR GAMES" />
-      <TextArea layoutX="261.0" layoutY="178.0" prefHeight="6.0" prefWidth="162.0" />
-      <TextArea layoutX="261.0" layoutY="254.0" prefHeight="6.0" prefWidth="162.0" />
-      <TextArea layoutX="261.0" layoutY="329.0" prefHeight="6.0" prefWidth="162.0" />
-      <Label layoutX="164.0" layoutY="110.0" prefHeight="32.0" prefWidth="47.0" text="NOME">
+      <Label fx:id="t1" layoutX="26.0" layoutY="133.0" prefHeight="32.0" prefWidth="101.0" text="N O M E" textFill="#3c096c">
          <font>
-            <Font name="Arial" size="12.0" />
+            <Font name="Arial" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="129.0" layoutY="181.0" prefHeight="32.0" prefWidth="117.0" text="DESENVOLVEDOR">
+      <TextField fx:id="text_nome" layoutX="115.0" layoutY="137.0" prefHeight="25.0" prefWidth="464.0" />
+      <Label fx:id="t11" layoutX="23.0" layoutY="177.0" prefHeight="32.0" prefWidth="255.0" text="D E S E N V O L V E D O R " textFill="#3c096c">
          <font>
-            <Font name="Arial" size="12.0" />
+            <Font name="Arial" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="129.0" layoutY="332.0" prefHeight="32.0" prefWidth="117.0" text="ALGUMA COISA">
+      <TextField fx:id="text_desenvol" layoutX="286.0" layoutY="181.0" prefHeight="25.0" prefWidth="294.0" />
+      <Pane layoutX="26.0" layoutY="233.0" prefHeight="225.0" prefWidth="270.0" style="-fx-background-color: #77af9c;">
+         <children>
+            <RadioButton fx:id="btn_moba" layoutX="22.0" layoutY="46.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="92.0" text="MOBA" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </RadioButton>
+            <Label fx:id="t111" layoutX="22.0" layoutY="14.0" prefHeight="32.0" prefWidth="122.0" text="G Ê N E R O" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="btn_rpg" layoutX="22.0" layoutY="84.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="92.0" text="RPG" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="btn_puzzle" layoutX="22.0" layoutY="122.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="92.0" text="PUZZLE" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="btn_fps" layoutX="22.0" layoutY="160.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="92.0" text="FPS" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </Pane>
+      <DatePicker fx:id="data" layoutX="405.0" layoutY="248.0" />
+      <Label fx:id="t12" layoutX="317.0" layoutY="244.0" prefHeight="32.0" prefWidth="101.0" text="D A T A" textFill="#3c096c">
          <font>
-            <Font name="Arial" size="12.0" />
-         </font>
-      </Label>
-      <Label layoutX="164.0" layoutY="257.0" prefHeight="32.0" prefWidth="117.0" text="ANO">
-         <font>
-            <Font name="Arial" size="12.0" />
+            <Font name="Arial" size="20.0" />
          </font>
       </Label>
    </children>
