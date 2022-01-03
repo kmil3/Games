@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
@@ -51,9 +52,10 @@ public class Controller implements Initializable {
     public void add_dados() throws IOException {
         String nome = text_nome.getText();
         String desenvol = text_desenvol.getText ();
-        String dataGame = ((ToggleButton) data.getDayCellFactory()).getText();
+        LocalDate dataa  = data.getValue();
+        String data1 = String.valueOf(dataa);
         String op = ((RadioButton) group.getSelectedToggle()).getText();
-        String stringTodos = "Nome do jogo: " + nome + "\n" + "Desenvolvido por: " + desenvol + "\n" + "Data de lançamento: " + dataGame + "\n" + "Gênero: " + op + "\n";
+        String stringTodos = "Nome do jogo: " + nome + "\n" + "Desenvolvido por: " + desenvol + "\n" + "Data de lançamento: " + data1 + "\n" + "Gênero: " + op + "\n";
         try {
             File arq = new File ("pesquisa.txt");
             if (arq.createNewFile ()) {
