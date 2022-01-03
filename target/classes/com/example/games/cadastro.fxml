@@ -71,7 +71,7 @@
             <Font name="Arial" size="15.0" />
          </font>
       </Label>
-      <Button layoutX="319.0" layoutY="478.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="128.0" style="-fx-background-color: #77af9c;" text="Cadastrar" textFill="WHITE" />
+      <Button layoutX="319.0" layoutY="478.0" onAction="#cadastrar" mnemonicParsing="false" prefHeight="38.0" prefWidth="128.0" style="-fx-background-color: #77af9c;" text="Cadastrar" textFill="WHITE" />
       <Button layoutX="456.0" layoutY="478.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="128.0" style="-fx-background-color: #77af9c;" text="Voltar" textFill="WHITE" />
    </children>
 </Pane>

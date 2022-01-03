@@ -21,8 +21,9 @@ public class ControllerMain {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        primaryStage.close();
-    }
+        primaryStage.hide();
+    } //isso se repete pra cada janela
+
     public void visualizar(){}
     public void alterar(){}
     public void remover(){}

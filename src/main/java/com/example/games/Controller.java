@@ -25,10 +25,22 @@ public class Controller implements Initializable {
     @FXML
     private ToggleGroup group;
 
-    public void cadastrar(){
-        String nome = text_nome.getText();
-        String desenvol = text_desenvol.getText();
+    public void cadastrar() throws IOException {
+    try {
+        add_dados();
+        Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
+        dialogoInfo.setTitle("Cadastro");
+        dialogoInfo.setHeaderText("CADASTRO DE GAMES");
+        dialogoInfo.setContentText("Informações salvas com sucesso!");
+        dialogoInfo.showAndWait();
 
+    }catch (IOException e) {
+        Alert dialogoErro = new Alert(Alert.AlertType.ERROR);
+        dialogoErro.setTitle("Erro");
+        dialogoErro.setHeaderText("CADASTRO DE GAMES");
+        dialogoErro.setContentText("Erro encontrado na hora de salvar os dados");
+        dialogoErro.showAndWait();
+        }
     }
 
     public void voltar(){}
