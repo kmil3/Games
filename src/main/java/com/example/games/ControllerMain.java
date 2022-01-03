@@ -6,13 +6,14 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 import static com.example.games.Main.primaryStage;
 
 public class ControllerMain {
     public void cadastrar(){
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("cadastro.fxml"));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("cadastro.fxml")));
             Stage stage = new Stage();
             Scene scene = new Scene(root, 600, 530);
             stage.setScene(scene);
@@ -20,8 +21,8 @@ public class ControllerMain {
 
         } catch (IOException e) {
             e.printStackTrace();
-        }
-        primaryStage.hide();
+        }primaryStage.close();
+
     } //isso se repete pra cada janela
 
     public void visualizar(){}
