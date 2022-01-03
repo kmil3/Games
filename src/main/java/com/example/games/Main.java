@@ -12,9 +12,9 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("cadastro.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("principal.fxml"));
         primaryStage.setTitle("Cadastro");
-        primaryStage.setScene(new Scene(root, 600, 530));
+        primaryStage.setScene(new Scene(root, 460, 365));
         primaryStage.show();
     }
 
