@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="488.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextArea layoutX="261.0" layoutY="107.0" prefHeight="6.0" prefWidth="162.0" />
+      <Label layoutX="187.0" layoutY="31.0" prefHeight="32.0" prefWidth="257.0" text="CADASTRO DE GAMES">
+         <font>
+            <Font name="Arial" size="22.0" />
+         </font>
+      </Label>
+      <Button layoutX="204.0" layoutY="411.0" mnemonicParsing="false" text="CADASTRAR" />
+      <Button layoutX="331.0" layoutY="411.0" mnemonicParsing="false" text="EXIBIR GAMES" />
+      <TextArea layoutX="261.0" layoutY="178.0" prefHeight="6.0" prefWidth="162.0" />
+      <TextArea layoutX="261.0" layoutY="254.0" prefHeight="6.0" prefWidth="162.0" />
+      <TextArea layoutX="261.0" layoutY="329.0" prefHeight="6.0" prefWidth="162.0" />
+      <Label layoutX="164.0" layoutY="110.0" prefHeight="32.0" prefWidth="47.0" text="NOME">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="129.0" layoutY="181.0" prefHeight="32.0" prefWidth="117.0" text="DESENVOLVEDOR">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="129.0" layoutY="332.0" prefHeight="32.0" prefWidth="117.0" text="ALGUMA COISA">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="164.0" layoutY="257.0" prefHeight="32.0" prefWidth="117.0" text="ANO">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
