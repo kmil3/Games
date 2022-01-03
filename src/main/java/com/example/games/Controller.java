@@ -27,7 +27,7 @@ public class Controller implements Initializable {
     @FXML
     private ToggleGroup group;
 
-    public void cadastrar() throws IOException {
+    public void cadastrar() throws IOException { //Camile w
     try {
         add_dados();
         Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
@@ -35,7 +35,7 @@ public class Controller implements Initializable {
         dialogoInfo.setHeaderText("CADASTRO DE GAMES");
         dialogoInfo.setContentText("Informações salvas com sucesso!");
         dialogoInfo.showAndWait();
-
+        set_info();
     }catch (IOException e) {
         Alert dialogoErro = new Alert(Alert.AlertType.ERROR);
         dialogoErro.setTitle("Erro");
@@ -47,9 +47,15 @@ public class Controller implements Initializable {
 
     public void voltar(){}
 
+    public void set_info(){ //Camile w
+        String a = " ";
+        text_nome.setText("");
+        text_desenvol.setText("");
+        data.getEditor().setText("");
+    }
 
     //código pra salvar em txt, só adaptar//
-    public void add_dados() throws IOException {
+    public void add_dados() throws IOException { //Camile p
         String nome = text_nome.getText();
         String desenvol = text_desenvol.getText ();
         LocalDate dataa  = data.getValue();
