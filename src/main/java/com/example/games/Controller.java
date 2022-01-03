@@ -13,6 +13,8 @@ import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
 
+import static com.example.games.Main.primaryStage;
+
 public class Controller implements Initializable {
 
     @FXML
@@ -45,10 +47,12 @@ public class Controller implements Initializable {
         }
     }
 
-    public void voltar(){}
+    public void voltar(){
+
+        primaryStage.show();
+    }
 
     public void set_info(){ //Camile w
-        String a = " ";
         text_nome.setText("");
         text_desenvol.setText("");
         data.getEditor().setText("");

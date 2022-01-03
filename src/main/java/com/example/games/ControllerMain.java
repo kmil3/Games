@@ -12,10 +12,11 @@ import static com.example.games.Main.primaryStage;
 
 public class ControllerMain {
     public void cadastrar(){
+
         try {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("cadastro.fxml")));
-            Stage stage = new Stage();
             Scene scene = new Scene(root, 600, 530);
+            Stage stage= new Stage();
             stage.setScene(scene);
             stage.show();
 
