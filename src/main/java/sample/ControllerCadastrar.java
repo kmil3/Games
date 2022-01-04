@@ -60,7 +60,7 @@ public class ControllerCadastrar implements Initializable {
         LocalDate dataa  = data.getValue();
         String data1 = String.valueOf(dataa);
         String op = ((RadioButton) group.getSelectedToggle()).getText();
-        String stringTodos = "Nome do jogo: " + nome + "\n" + "Desenvolvido por: " + desenvol + "\n" + "Data de lançamento: " + data1 + "\n" + "Gênero: " + op + "\n";
+        String stringTodos = "Nome do jogo: " + nome + "\n" + "Desenvolvido por: " + desenvol + "\n" + "Data de lançamento: " + data1 + "\n" + "Gênero: " + op + "\n" + "----------------" + "\n";
         try {
             File arq = new File ("pesquisa.txt");
             if (arq.createNewFile ()) {
