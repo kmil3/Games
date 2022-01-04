@@ -1,4 +1,4 @@
-package com.example.games;
+package sample;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -10,8 +10,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
-
-import static com.example.games.Main.primaryStage;
 
 public class ControllerCadastrar implements Initializable {
 
@@ -46,7 +44,7 @@ public class ControllerCadastrar implements Initializable {
     }
 
     public void voltar(){
-        primaryStage.show();
+        Main.primaryStage.show();
     }
 
     public void set_info(){ //Camile w

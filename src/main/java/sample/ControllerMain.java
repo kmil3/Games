@@ -1,4 +1,4 @@
-package com.example.games;
+package sample;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
-import static com.example.games.Main.primaryStage;
+import static sample.Main.primaryStage;
 
 public class ControllerMain {
     @FXML

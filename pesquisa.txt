@@ -1,1 +1,5 @@
 
+Nome do jogo: lala
+Desenvolvido por: lolo
+Data de lançamento: 2022-01-07
+Gênero: RPG
