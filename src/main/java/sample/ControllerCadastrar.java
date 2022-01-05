@@ -15,7 +15,7 @@ import static sample.Main.primaryStage;
 public class ControllerCadastrar implements Initializable {
 
     @FXML
-    TextField text_nome, text_desenvol;
+    public static TextField text_nome, text_desenvol;
 
     @FXML
     RadioButton btn_moba, btn_rpg, btn_puzzle, btn_fps;

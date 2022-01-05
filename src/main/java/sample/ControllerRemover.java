@@ -4,10 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
-import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
-
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -16,7 +13,8 @@ import static sample.Main.primaryStage;
 
 public class ControllerRemover{
     @FXML
-    Button voltar;
+     Button voltar, remove;
+
     @FXML
     TextField remover;
 
@@ -27,8 +25,10 @@ public class ControllerRemover{
     }
 
 
+
+    @FXML
     private void remover(ActionEvent actionEvent) {
-        if (actionEvent.getSource() == remover){
+        if (actionEvent.getSource() == remove){
             ArrayList<Games> listaDeGames = (ArrayList<Games>) Auxiliar.le_arquivo();
             Iterator<Games> listDeGames = listaDeGames.iterator();
             int posicao = -1;
@@ -47,7 +47,8 @@ public class ControllerRemover{
             } else{
                 listaDeGames.remove(posicao);
                 //salva o arquivo
-
+                remove.getScene().getWindow().hide();
+                primaryStage.show();
             }
         }
     }
