@@ -1,19 +1,25 @@
 package sample;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
+import javafx.scene.control.Button;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import static sample.Main.primaryStage;
 
 public class BarChartSample implements Initializable {
 
     @FXML
     BarChart <String, Number> bar;
 
+    @FXML
+    Button voltar;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -55,5 +61,10 @@ public class BarChartSample implements Initializable {
 
 
         bar.getData().addAll(series1, series2, series3);
+    }
+
+    public void voltar(ActionEvent event){
+        voltar.getScene().getWindow().hide();
+        primaryStage.show();
     }
 }

@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
+import static sample.Main.primaryStage;
 
 public class ControllerCadastrar implements Initializable {
 
@@ -17,10 +18,13 @@ public class ControllerCadastrar implements Initializable {
     TextField text_nome, text_desenvol;
 
     @FXML
-    RadioButton btn_moba, btn_rpg, btn_puzzle, btn_fps, voltar;
+    RadioButton btn_moba, btn_rpg, btn_puzzle, btn_fps;
 
     @FXML
     DatePicker data;
+
+    @FXML
+    Button voltar;
 
     @FXML
     private ToggleGroup group;
@@ -45,6 +49,7 @@ public class ControllerCadastrar implements Initializable {
 
     public void voltar(ActionEvent event){
         voltar.getScene().getWindow().hide();
+        primaryStage.show();
     }
 
     public void set_info(){ //Camile w

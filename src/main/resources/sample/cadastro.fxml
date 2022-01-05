@@ -70,7 +70,7 @@
          <font>
             <Font size="16.0" />
          </font></Button>
-      <Button layoutX="456.0" layoutY="478.0" mnemonicParsing="false" onAction="#voltar" prefHeight="38.0" prefWidth="128.0" style="-fx-background-color: #77af9c;" text="Voltar" textFill="WHITE">
+      <Button fx:id="voltar" layoutX="456.0" layoutY="478.0" mnemonicParsing="false" onAction="#voltar" prefHeight="38.0" prefWidth="128.0" style="-fx-background-color: #77af9c;" text="Voltar" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font></Button>

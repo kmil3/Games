@@ -19,7 +19,7 @@ public class Main extends Application {
 
         try {
             Parent root = FXMLLoader.load(getClass().getResource("principal.fxml"));
-            Scene scene = new Scene(root, 460, 365);
+            Scene scene = new Scene(root, 460, 392);
             primaryStage.setTitle("Tela menu");
             primaryStage.setScene(scene);
             primaryStage.show();

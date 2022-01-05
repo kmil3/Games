@@ -45,7 +45,17 @@ public class ControllerMain {
     }
 
     public void alterar() {
-        //nao vamos usar por enquanto
+        try {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("altera.fxml")));
+            Stage stage = new Stage();
+            Scene scene = new Scene(root, 600, 530);
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        primaryStage.close();
     }
 
     public void remover() {
