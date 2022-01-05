@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -16,7 +17,7 @@ public class ControllerCadastrar implements Initializable {
     TextField text_nome, text_desenvol;
 
     @FXML
-    RadioButton btn_moba, btn_rpg, btn_puzzle, btn_fps;
+    RadioButton btn_moba, btn_rpg, btn_puzzle, btn_fps, voltar;
 
     @FXML
     DatePicker data;
@@ -42,8 +43,8 @@ public class ControllerCadastrar implements Initializable {
         }
     }
 
-    public void voltar(){
-        Main.primaryStage.show();
+    public void voltar(ActionEvent event){
+        voltar.getScene().getWindow().hide();
     }
 
     public void set_info(){ //Camile w
