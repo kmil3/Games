@@ -42,7 +42,7 @@ public class ControllerRemover{
                 i++;
             }
             if (posicao == -1){
-                Alert dialogo = new Alert(Alert.AlertType.ERROR, "Game não encontrada!");
+                Alert dialogo = new Alert(Alert.AlertType.ERROR, "Game não encontrado!");
                 dialogo.showAndWait();
             } else{
                 listaDeGames.remove(posicao);
