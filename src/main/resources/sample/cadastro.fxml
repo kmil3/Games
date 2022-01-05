@@ -6,7 +6,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="600.0" style="-fx-background-color: #fdfffc;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerCadastrar">
    <children>
-      <Label fx:id="t" layoutX="118.0" prefHeight="32.0" prefWidth="333.0" text="Cadastro de">
+      <Label fx:id="t" layoutX="121.0" layoutY="-7.0" prefHeight="94.0" prefWidth="437.0" text="Cadastro de">
          <font>
             <Font name="Bodoni MT Condensed" size="65.0" />
          </font>
