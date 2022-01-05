@@ -21,8 +21,8 @@ public class ControllerVisualizar implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
     }
-
     public void volta(ActionEvent event){
         voltar.getScene().getWindow().hide();
     }
+
 }
