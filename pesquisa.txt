@@ -3,3 +3,8 @@ Nome do jogo: lala
 Desenvolvido por: lolo
 Data de lançamento: 2022-01-07
 Gênero: RPG
+Nome do jogo: uiuiu
+Desenvolvido por: Camile
+Data de lançamento: 2021-10-27
+Gênero: PUZZLE
+----------------
