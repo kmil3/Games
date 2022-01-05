@@ -1,4 +1,4 @@
-package com.example.games;
+package sample;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,13 +11,11 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
-import static com.example.games.Main.primaryStage;
+import static sample.Main.primaryStage;
 
 public class ControllerMain {
-    @FXML
-    Button voltar, voltarVisu;
 
-    public void cadastrar() {
+     public void cadastrar() {
         try {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("cadastro.fxml")));
             Stage stage = new Stage();
@@ -47,7 +45,17 @@ public class ControllerMain {
     }
 
     public void alterar() {
-        //nao vamos usar por enquanto
+        try {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("altera.fxml")));
+            Stage stage = new Stage();
+            Scene scene = new Scene(root, 600, 530);
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        primaryStage.close();
     }
 
     public void remover() {
@@ -64,15 +72,19 @@ public class ControllerMain {
         primaryStage.close();
     }
 
-    public void voltarRemove(ActionEvent a) {
-        if (a.getSource() == voltar) {
-            remover();
+    public void mostrar_grafico() {
+        try {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("sample_grafico.fxml")));
+            Stage stage = new Stage();
+            Scene scene = new Scene(root, 600, 530);
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+        primaryStage.close();
     }
 
-    public void voltarVisu(ActionEvent a) {
-        if (a.getSource() == voltarVisu) {
-           visualizar();
-        }
-    }
+
 }
