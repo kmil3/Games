@@ -26,9 +26,14 @@
             </Label>
          </children>
       </Pane>
-      <Button fx:id="voltar" layoutX="271.0" layoutY="402.0" mnemonicParsing="false" onAction="#voltar" prefHeight="31.0" prefWidth="88.0" style="-fx-background-color: #77af9c;" text="V o l t a r" textFill="WHITE">
+      <Button fx:id="voltar" layoutX="354.0" layoutY="397.0" mnemonicParsing="false" onAction="#voltar" prefHeight="31.0" prefWidth="88.0" style="-fx-background-color: #77af9c;" text="V o l t a r" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="12.0" />
          </font></Button>
+      <Button fx:id="remover" layoutX="199.0" layoutY="397.0" mnemonicParsing="false" onAction="#removeGame" prefHeight="31.0" prefWidth="88.0" style="-fx-background-color: #77af9c;" text="R e m o v e r" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

@@ -32,4 +32,5 @@ public class ControllerVisualizar implements Initializable {
         obs_games = Auxiliar.le_arquivo();
         table_visualizar.setItems(obs_games);
     }
+
 }
