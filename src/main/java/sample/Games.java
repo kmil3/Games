@@ -1,5 +1,7 @@
 package sample;
 
+import java.util.Objects;
+
 public class Games {
     String nome, genero, desenvolvedor;
     int ano;
@@ -41,5 +43,29 @@ public class Games {
 
     public void setAno(int ano) {
         this.ano = ano;
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        sample.Games jogo = (sample.Games) o;
+        return Objects.equals(nome, jogo.getNome()) && Objects.equals(genero, jogo.getGenero()) && Objects.equals(desenvolvedor, jogo.getDesenvolvedor()) && Objects.equals(ano, jogo.getAno());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nome, genero, desenvolvedor, ano);
+    }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "Nome:'" + nome + '\'' +
+                ", Genero:'" + genero + '\'' +
+                ", Desenvolvedor:'" + desenvolvedor + '\'' +
+                ", Ano:'" + ano + '\'' +
+                '}';
     }
 }

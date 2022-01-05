@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="488.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Main">
+<AnchorPane prefHeight="488.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Main">
    <children>
-      <Label layoutX="198.0" layoutY="51.0" text="Alterar ">
+      <Label layoutX="146.0" layoutY="14.0" text="A L T E R A R">
          <font>
-            <Font name="Bodoni MT Condensed" size="56.0" />
+            <Font name="Bodoni MT Condensed" size="63.0" />
          </font>
       </Label>
-      <Label layoutX="258.0" layoutY="112.0" prefHeight="27.0" prefWidth="213.0" text="C A D A S T R O ">
+      <Label layoutX="300.0" layoutY="83.0" prefHeight="27.0" prefWidth="213.0" text="C A D A S T R O ">
          <font>
-            <Font name="Arial" size="21.0" />
+            <Font name="Arial" size="27.0" />
          </font>
       </Label>
    </children>

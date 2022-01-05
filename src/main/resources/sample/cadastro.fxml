@@ -11,17 +11,12 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="600.0" style="-fx-background-color: #fdfffc;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerCadastrar">
    <children>
-      <Label fx:id="t" layoutX="118.0" prefHeight="32.0" prefWidth="333.0" text="Cadastro de">
+      <Label fx:id="t" layoutX="262.0" layoutY="37.0" prefHeight="78.0" prefWidth="227.0" text="C A D A S T R O">
          <font>
-            <Font name="Bodoni MT Condensed" size="65.0" />
+            <Font name="Arial" size="27.0" />
          </font>
       </Label>
-      <Label layoutX="350.0" layoutY="62.0" prefHeight="32.0" prefWidth="170.0" text="G A M E S ">
-         <font>
-            <Font name="Arial" size="25.0" />
-         </font>
-      </Label>
-      <Label fx:id="t1" layoutX="284.0" layoutY="102.0" prefHeight="32.0" prefWidth="65.0" text="N O M E">
+      <Label fx:id="t1" layoutX="285.0" layoutY="108.0" prefHeight="32.0" prefWidth="65.0" text="N O M E">
          <font>
             <Font name="Arial" size="15.0" />
          </font>
@@ -32,7 +27,7 @@
             <Font name="Arial" size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="text_desenvol" layoutX="121.0" layoutY="134.0" prefHeight="25.0" prefWidth="359.0" promptText="Digite aqui..." />
+      <TextField fx:id="text_desenvol" layoutX="121.0" layoutY="143.0" prefHeight="25.0" prefWidth="359.0" promptText="Digite aqui..." />
       <Pane layoutX="14.0" layoutY="308.0" prefHeight="212.0" prefWidth="291.0" style="-fx-background-color: #77af9c;">
          <children>
             <RadioButton fx:id="btn_moba" layoutX="22.0" layoutY="46.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="92.0" text="MOBA" textFill="WHITE">
@@ -79,5 +74,10 @@
          <font>
             <Font size="16.0" />
          </font></Button>
+      <Label fx:id="t2" layoutX="160.0" layoutY="-2.0" prefHeight="78.0" prefWidth="170.0" text="N O V O">
+         <font>
+            <Font name="Bodoni MT Condensed" size="63.0" />
+         </font>
+      </Label>
    </children>
 </Pane>

@@ -14,10 +14,8 @@ import java.util.Objects;
 import static sample.Main.primaryStage;
 
 public class ControllerMain {
-    @FXML
-    Button voltar, voltarVisu;
 
-    public void cadastrar() {
+     public void cadastrar() {
         try {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("cadastro.fxml")));
             Stage stage = new Stage();
@@ -64,15 +62,19 @@ public class ControllerMain {
         primaryStage.close();
     }
 
-    public void voltarRemove(ActionEvent a) {
-        if (a.getSource() == voltar) {
-            remover();
+    public void mostrar_grafico() {
+        try {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("sample_grafico.fxml")));
+            Stage stage = new Stage();
+            Scene scene = new Scene(root, 600, 530);
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+        primaryStage.close();
     }
 
-    public void voltarVisu(ActionEvent a) {
-        if (a.getSource() == voltarVisu) {
-           visualizar();
-        }
-    }
+
 }

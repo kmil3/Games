@@ -1,10 +1,8 @@
 package sample;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -25,9 +23,6 @@ public class ControllerCadastrar implements Initializable {
 
     @FXML
     private ToggleGroup group;
-
-    @FXML
-    private Button voltar;
 
     public void cadastrar() throws IOException { //Camile w
     try {
@@ -51,9 +46,6 @@ public class ControllerCadastrar implements Initializable {
         Main.primaryStage.show();
     }
 
-    public void voltar(ActionEvent event){
-        voltar.getScene().getWindow().hide();
-    }
     public void set_info(){ //Camile w
         text_nome.setText("");
         text_desenvol.setText("");
