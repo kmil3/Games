@@ -52,6 +52,7 @@ public class ControllerCadastrar implements Initializable {
         primaryStage.show();
     }
 
+
     public void set_info(){ //Camile w
         text_nome.setText("");
         text_desenvol.setText("");
