@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -18,18 +19,15 @@ public class ControllerRemover{
     @FXML
     TextField remover;
 
-
     public void voltar(ActionEvent event){
         voltar.getScene().getWindow().hide();
         primaryStage.show();
     }
 
-
-
     @FXML
     private void remover(ActionEvent actionEvent) {
         if (actionEvent.getSource() == remove){
-            ArrayList<Games> listaDeGames = (ArrayList<Games>) Auxiliar.le_arquivo();
+            ObservableList<Games> listaDeGames = Auxiliar.le_arquivo();
             Iterator<Games> listDeGames = listaDeGames.iterator();
             int posicao = -1;
             int i = 0;
