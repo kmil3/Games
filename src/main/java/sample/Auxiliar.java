@@ -25,8 +25,7 @@ public class Auxiliar {
             }
             System.out.println("Dados atualizados com sucesso!");
         } catch (IOException e) {
-            System.err.println("Erro ao criar o arquivo arquivo.bin.");
-            mostra_aviso(Alert.AlertType.ERROR,"Erro ao criar o arquivo arquivo.bin.");
+            mostra_aviso(Alert.AlertType.ERROR,"Erro ao criar o arquivo arquivo");
         }
     }
 
@@ -45,8 +44,7 @@ public class Auxiliar {
             }
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
-            System.err.println("Erro ao abrir o arquivo arquivo.bin.");
-            mostra_aviso(Alert.AlertType.ERROR,"Erro ao abrir o arquivo arquivo.bin.");
+            mostra_aviso(Alert.AlertType.ERROR,"Erro ao abrir o arquivo arquivo");
         }
         ObservableList<Games> nomes = FXCollections.observableArrayList();
 

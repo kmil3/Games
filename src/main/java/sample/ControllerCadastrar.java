@@ -10,6 +10,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
+
+import static sample.ControllerVisualizar.obs_games;
+import static sample.ControllerVisualizar.table_visualizar;
 import static sample.Main.primaryStage;
 
 public class ControllerCadastrar implements Initializable {
@@ -29,7 +32,7 @@ public class ControllerCadastrar implements Initializable {
     @FXML
     private ToggleGroup group;
 
-    public void cadastrar() throws IOException { //Camile w
+    public void cadastrar() throws IOException {
     try {
         add_dados();
         Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
@@ -52,42 +55,22 @@ public class ControllerCadastrar implements Initializable {
         primaryStage.show();
     }
 
-    public void set_info(){ //Camile w
+    public void set_info(){
         text_nome.setText("");
         text_desenvol.setText("");
         data.getEditor().setText("");
     }
 
-    //código pra salvar em txt, só adaptar//
-    public void add_dados() throws IOException { //Camile p
-        String nome = text_nome.getText();
-        String desenvol = text_desenvol.getText ();
+    public void add_dados() throws IOException {
         LocalDate dataa  = data.getValue();
         String data1 = String.valueOf(dataa);
         String op = ((RadioButton) group.getSelectedToggle()).getText();
-        String stringTodos = "Nome do jogo: " + nome + "\n" + "Desenvolvido por: " + desenvol + "\n" + "Data de lançamento: " + data1 + "\n" + "Gênero: " + op + "\n" + "----------------" + "\n";
-        try {
-            File arq = new File ("pesquisa.txt");
-            if (arq.createNewFile ()) {
-                try {
-                    FileWriter arqW = new FileWriter (arq, true);
-                    arqW.write (stringTodos);
-                    arqW.close ();
-                    System.out.println ("Dados salvos!");
-                } catch (IOException ex) {
-                    System.out.println ("Erro ao salvar dados");
-                    ex.printStackTrace ();
-                }
-
-            } else {
-                FileWriter arqW = new FileWriter (arq, true);
-                arqW.write (stringTodos);
-                arqW.close ();
-            }
-        } catch (IOException e) {
-            System.out.println ("Erro!");
-            e.printStackTrace ();
-        }
+        String nome =  text_nome.getText();
+        String desenvolvedor = text_desenvol.getText();
+        obs_games.add(new Games(nome,op,desenvolvedor,data1));
+        table_visualizar.setItems(obs_games);
+        set_info();
+        Auxiliar.salva_arquivo(obs_games);
     }
 
     @Override

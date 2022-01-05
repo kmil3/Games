@@ -3,15 +3,16 @@ package sample;
 import java.util.Objects;
 
 public class Games {
-    String nome, genero, desenvolvedor;
-    int ano;
+    String nome, genero, desenvolvedor, ano;
 
-    public Games(String nome, String genero, String desenvolvedor, int ano){
+
+    public Games(String nome, String genero, String desenvolvedor, String ano){
         this.nome = nome;
         this.genero = genero;
         this.desenvolvedor = desenvolvedor;
         this.ano = ano;
     }
+
 
     public String getNome() {
         return nome;
@@ -37,11 +38,11 @@ public class Games {
         this.desenvolvedor = desenvolvedor;
     }
 
-    public int getAno() {
+    public String getAno() {
         return ano;
     }
 
-    public void setAno(int ano) {
+    public void setAno(String ano) {
         this.ano = ano;
     }
 
