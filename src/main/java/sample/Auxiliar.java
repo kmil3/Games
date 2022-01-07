@@ -10,6 +10,25 @@ import java.util.ArrayList;
 public class Auxiliar {
     private static final String NOME_ARQUIVO = "pesquisa.txt";
 
+    public static void salva_arquivo(ObservableList<Games> linhas_para_salvar) {
+        ArrayList<Games> nomes = new ArrayList();
+
+        nomes.addAll(linhas_para_salvar);
+        try {
+            File f = new File(NOME_ARQUIVO);
+            if (!f.exists()) {
+                f.createNewFile();
+            }
+            try (FileOutputStream fx = new FileOutputStream(f);
+                 ObjectOutputStream k = new ObjectOutputStream(fx);){
+                k.writeObject(nomes);
+            }
+            System.out.println("Dados atualizados com sucesso!");
+        } catch (IOException e) {
+            System.err.println("Erro ao criar o arquivo arquivo.");
+            mostra_aviso(Alert.AlertType.ERROR,"Erro ao criar o arquivo arquivo.");
+        }
+    }
 
     public static ObservableList<Games> le_arquivo() {
         ArrayList<Games> linhas = new ArrayList();
@@ -26,8 +45,8 @@ public class Auxiliar {
             }
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
-            System.err.println("Erro ao abrir o arquivo arquivo.bin.");
-            mostra_aviso(Alert.AlertType.ERROR,"Erro ao abrir o arquivo arquivo.bin.");
+            System.err.println("Erro ao abrir o arquivo arquivo.");
+            mostra_aviso(Alert.AlertType.ERROR,"Erro ao abrir o arquivo arquivo.");
         }
         ObservableList<Games> nomes = FXCollections.observableArrayList();
 

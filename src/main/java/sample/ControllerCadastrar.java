@@ -10,6 +10,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
+
+import static sample.ControllerVisualizar.obs_games;
 import static sample.Main.primaryStage;
 
 public class ControllerCadastrar implements Initializable {
@@ -66,29 +68,7 @@ public class ControllerCadastrar implements Initializable {
         LocalDate dataa  = data.getValue();
         String data1 = String.valueOf(dataa);
         String op = ((RadioButton) group.getSelectedToggle()).getText();
-        String stringTodos = "Nome do jogo: " + nome + "\n" + "Desenvolvido por: " + desenvol + "\n" + "Data de lançamento: " + data1 + "\n" + "Gênero: " + op + "\n" + "----------------" + "\n";
-        try {
-            File arq = new File ("pesquisa.txt");
-            if (arq.createNewFile ()) {
-                try {
-                    FileWriter arqW = new FileWriter (arq, true);
-                    arqW.write (stringTodos);
-                    arqW.close ();
-                    System.out.println ("Dados salvos!");
-                } catch (IOException ex) {
-                    System.out.println ("Erro ao salvar dados");
-                    ex.printStackTrace ();
-                }
-
-            } else {
-                FileWriter arqW = new FileWriter (arq, true);
-                arqW.write (stringTodos);
-                arqW.close ();
-            }
-        } catch (IOException e) {
-            System.out.println ("Erro!");
-            e.printStackTrace ();
-        }
+        obs_games.add(new Games(nome,op,desenvol, data1));
     }
 
     @Override

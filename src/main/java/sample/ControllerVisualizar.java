@@ -14,7 +14,7 @@ import static sample.Main.primaryStage;
 
 public class ControllerVisualizar implements Initializable {
     @FXML
-    TableView table_visualizar;
+    static TableView table_visualizar;
 
     @FXML
     static ObservableList<Games> obs_games;
