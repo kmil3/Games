@@ -67,6 +67,6 @@
          </font>
       </Label>
       <Button fx:id="cadastrar" layoutX="319.0" layoutY="478.0" mnemonicParsing="false" onAction="#cadastrar" prefHeight="38.0" prefWidth="128.0" style="-fx-background-color: #77af9c;" text="Cadastrar" textFill="WHITE" />
-      <Button layoutX="456.0" layoutY="478.0" mnemonicParsing="false" prefHeight="38.0" onAction="#voltar" prefWidth="128.0" style="-fx-background-color: #77af9c;" text="Voltar" textFill="WHITE" />
+      <Button fx:id="voltar" layoutX="456.0" layoutY="478.0" mnemonicParsing="false" prefHeight="38.0" onAction="#voltar" prefWidth="128.0" style="-fx-background-color: #77af9c;" text="Voltar" textFill="WHITE" />
    </children>
 </Pane>
