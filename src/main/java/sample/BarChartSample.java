@@ -1,4 +1,5 @@
 package sample;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -29,7 +30,8 @@ public class BarChartSample implements Initializable {
 
 
         int MOBA = 0, RPG = 0, PUZZLE = 0, FPS=0;
-        for (Games x: ControllerVisualizar.obs_games) {
+        ObservableList<Games> games_salvos = Auxiliar.le_arquivo();
+        for (Games x: games_salvos) {
             if (x.getGenero().equals("MOBA")) {
                 MOBA ++;
             } else if (x.getGenero().equals("RPG")){

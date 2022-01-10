@@ -1,9 +1,13 @@
 package sample;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 
-public class Games {
+public class Games implements Serializable {
     String nome, genero, desenvolvedor, ano;
+    ArrayList<Games> listajogos = new ArrayList<Games>();
+
 
     public Games(String nome, String genero, String desenvolvedor, String ano){
         this.nome = nome;

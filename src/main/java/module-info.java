@@ -1,9 +1,12 @@
-module com.example.games {
+module sample {
     requires javafx.controls;
     requires javafx.fxml;
-
     requires org.controlsfx.controls;
+    requires org.apache.poi.poi;
+    requires org.apache.poi.ooxml;
 
-    opens sample to javafx.fxml;
     exports sample;
+
+    opens sample to
+            javafx.fxml;
 }

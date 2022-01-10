@@ -1,24 +1,21 @@
 package sample;
 
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
 
-import static sample.ControllerVisualizar.obs_games;
-import static sample.ControllerVisualizar.table_visualizar;
 import static sample.Main.primaryStage;
 
 public class ControllerCadastrar implements Initializable {
 
     @FXML
-    public static TextField text_nome, text_desenvol;
+    public TextField text_nome, text_desenvol;
 
     @FXML
     RadioButton btn_moba, btn_rpg, btn_puzzle, btn_fps;
@@ -69,11 +66,8 @@ public class ControllerCadastrar implements Initializable {
         LocalDate dataa  = data.getValue();
         String data1 = String.valueOf(dataa);
         String op = ((RadioButton) group.getSelectedToggle()).getText();
-
-        obs_games.add(new Games(nome,op,desenvol, data1));
-        table_visualizar.setItems(obs_games);
+        Auxiliar.salva_arquivo(new Games(nome,op,desenvol, data1));
         set_info();
-        Auxiliar.salva_arquivo(obs_games);
     }
 
     @Override

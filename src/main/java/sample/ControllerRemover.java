@@ -34,7 +34,7 @@ public class ControllerRemover{
 
             while (listDeGames.hasNext()) {
                 Games game = listDeGames.next();
-                if (ControllerCadastrar.text_nome.getText().equals(game.getNome())){
+                if (remover.getText().equals(game.getNome())){
                     posicao = i;
                 }
                 i++;
@@ -44,7 +44,7 @@ public class ControllerRemover{
                 dialogo.showAndWait();
             } else{
                 listaDeGames.remove(posicao);
-                //salva o arquivo
+                Auxiliar.salva_arquivo(listaDeGames);
                 remove.getScene().getWindow().hide();
                 primaryStage.show();
             }
