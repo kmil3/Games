@@ -12,7 +12,7 @@ import java.util.ResourceBundle;
 
 import static sample.Main.primaryStage;
 
-public class ControllerCadastrar implements Initializable { //Camile Weber
+public class ControllerCadastrar implements Initializable { //Camile Weber e Camile Pedrolo
 
     @FXML
     public TextField text_nome, text_desenvol;
@@ -47,7 +47,7 @@ public class ControllerCadastrar implements Initializable { //Camile Weber
         }
     }
 
-    public void voltar(ActionEvent event){ //Camile Pedrolo
+    public void voltar(ActionEvent event){
         voltar.getScene().getWindow().hide();
         primaryStage.show();
     }

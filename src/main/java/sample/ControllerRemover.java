@@ -12,7 +12,7 @@ import java.util.Iterator;
 import static sample.Main.primaryStage;
 
 
-public class ControllerRemover{
+public class ControllerRemover{ //Jadina Brummelhaus
     @FXML
      Button voltar, remove;
 

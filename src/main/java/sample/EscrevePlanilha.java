@@ -21,7 +21,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 
-public class EscrevePlanilha { //Camile Weber
+public class EscrevePlanilha { //Camile Weber e Camile Pedrolo
     public static void escrever_planilha(ObservableList<Games> listajogos) throws IOException {
 
         XSSFWorkbook workbook = new XSSFWorkbook();
