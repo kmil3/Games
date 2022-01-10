@@ -39,15 +39,17 @@ public class ControllerVisualizar implements Initializable {
         genero.setCellValueFactory(new PropertyValueFactory<>("genero"));
         desenvolvedor.setCellValueFactory(new PropertyValueFactory<>("desenvolvedor"));
         ano.setCellValueFactory(new PropertyValueFactory<>("ano"));
-
         obs_games = Auxiliar.le_arquivo();
         table_visualizar.setItems(obs_games);
     }
     @FXML
     public void gerar_planilha() throws IOException {
-        Escreve.escrever_planilha();
+        EscrevePlanilha.escrever_planilha(obs_games);
     }
 
     @FXML
-    public void gerar_pdf(){}
+    public void gerar_pdf(){
+        EscrevePDF.escrever_pdf(obs_games);
+    }
+
 }

@@ -8,7 +8,7 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class Auxiliar {
-    private static final String NOME_ARQUIVO = "pesquisa.bin";
+    private static final String NOME_ARQUIVO = "Games.bin";
 
     public static void salva_arquivo(Games novo) {
         ArrayList<Games> linhas = le_arraylist_arquivo();
@@ -51,7 +51,7 @@ public class Auxiliar {
         return nomes;
     }
 
-    private static ArrayList<Games> le_arraylist_arquivo() {
+    public static ArrayList<Games> le_arraylist_arquivo() {
         ArrayList<Games> linhas = new ArrayList();
         try {
             File f = new File(NOME_ARQUIVO);

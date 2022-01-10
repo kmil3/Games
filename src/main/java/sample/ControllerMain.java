@@ -52,6 +52,7 @@ public class ControllerMain {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        ControllerAlterar.pega_id();
         primaryStage.close();
     }
 

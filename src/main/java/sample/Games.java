@@ -1,5 +1,7 @@
 package sample;
 
+import javafx.scene.control.TableColumn;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
@@ -14,6 +16,9 @@ public class Games implements Serializable {
         this.genero = genero;
         this.desenvolvedor = desenvolvedor;
         this.ano = ano;
+    }
+
+    public Games(TableColumn<Games, String> nome, TableColumn<Games, String> genero, TableColumn<Games, String> desenvolvedor, TableColumn<Games, String> ano) {
     }
 
     public String getNome() {
@@ -64,7 +69,7 @@ public class Games implements Serializable {
 
     @Override
     public String toString() {
-        return "Animal{" +
+        return "Jogo{" +
                 "Nome:'" + nome + '\'' +
                 ", Genero:'" + genero + '\'' +
                 ", Desenvolvedor:'" + desenvolvedor + '\'' +
