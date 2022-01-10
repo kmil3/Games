@@ -12,7 +12,7 @@ import java.util.ResourceBundle;
 
 import static sample.Main.primaryStage;
 
-public class ControllerCadastrar implements Initializable {
+public class ControllerCadastrar implements Initializable { //Camile Weber
 
     @FXML
     public TextField text_nome, text_desenvol;
@@ -29,7 +29,7 @@ public class ControllerCadastrar implements Initializable {
     @FXML
     private ToggleGroup group;
 
-    public void cadastrar() throws IOException { //Camile w
+    public void cadastrar() throws IOException {
     try {
         add_dados();
         Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
@@ -47,20 +47,20 @@ public class ControllerCadastrar implements Initializable {
         }
     }
 
-    public void voltar(ActionEvent event){
+    public void voltar(ActionEvent event){ //Camile Pedrolo
         voltar.getScene().getWindow().hide();
         primaryStage.show();
     }
 
 
-    public void set_info(){ //Camile w
+    public void set_info(){
         text_nome.setText("");
         text_desenvol.setText("");
         data.getEditor().setText("");
     }
 
-    //código pra salvar em txt, só adaptar//
-    public void add_dados() throws IOException { //Camile p
+
+    public void add_dados() throws IOException {
         String nome = text_nome.getText();
         String desenvol = text_desenvol.getText ();
         LocalDate dataa  = data.getValue();

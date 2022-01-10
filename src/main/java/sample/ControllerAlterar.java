@@ -55,7 +55,6 @@ public class ControllerAlterar implements Initializable {
                 d.setAno(data.getValue().toString());
                 d.setGenero(((RadioButton) group.getSelectedToggle()).getText());
             }
-
         }
         }
 

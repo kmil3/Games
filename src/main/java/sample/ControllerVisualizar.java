@@ -4,6 +4,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -15,7 +16,7 @@ import java.util.ResourceBundle;
 
 import static sample.Main.primaryStage;
 
-public class ControllerVisualizar implements Initializable {
+public class ControllerVisualizar implements Initializable { //Camile weber
     @FXML
     TableView table_visualizar;
 
@@ -45,11 +46,21 @@ public class ControllerVisualizar implements Initializable {
     @FXML
     public void gerar_planilha() throws IOException {
         EscrevePlanilha.escrever_planilha(obs_games);
+        Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
+        dialogoInfo.setTitle("Planilha");
+        dialogoInfo.setHeaderText("Planilha gerada com sucesso!");
+        dialogoInfo.setContentText("ALELUIA MEU DEUS");
+        dialogoInfo.showAndWait();
     }
 
     @FXML
-    public void gerar_pdf(){
+    public void gerar_pdf() throws IOException {
         EscrevePDF.escrever_pdf(obs_games);
+        Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
+        dialogoInfo.setTitle("PDF");
+        dialogoInfo.setHeaderText("PDF gerado com sucesso!");
+        dialogoInfo.setContentText("ALELUIA MEU DEUS");
+        dialogoInfo.showAndWait();
     }
 
 }
