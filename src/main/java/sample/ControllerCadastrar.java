@@ -12,6 +12,7 @@ import java.time.LocalDate;
 import java.util.ResourceBundle;
 
 import static sample.ControllerVisualizar.obs_games;
+import static sample.ControllerVisualizar.table_visualizar;
 import static sample.Main.primaryStage;
 
 public class ControllerCadastrar implements Initializable {
@@ -68,7 +69,11 @@ public class ControllerCadastrar implements Initializable {
         LocalDate dataa  = data.getValue();
         String data1 = String.valueOf(dataa);
         String op = ((RadioButton) group.getSelectedToggle()).getText();
+
         obs_games.add(new Games(nome,op,desenvol, data1));
+        table_visualizar.setItems(obs_games);
+        set_info();
+        Auxiliar.salva_arquivo(obs_games);
     }
 
     @Override
