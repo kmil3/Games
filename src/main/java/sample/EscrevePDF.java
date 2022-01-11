@@ -25,12 +25,11 @@ public class EscrevePDF { //Camile Weber
                     "Games.pdf"));
             document.open();
 
-            PdfPTable table = new PdfPTable(4); // 3 columns.
-            table.setWidthPercentage(100); //Width 100%
-            table.setSpacingBefore(10f); //Space before table
-            table.setSpacingAfter(10f); //Space after table
+            PdfPTable table = new PdfPTable(4);
+            table.setWidthPercentage(100);
+            table.setSpacingBefore(10f);
             table.setSpacingAfter(10f);
-            //Set Column widths
+            table.setSpacingAfter(10f);
             float[] columnWidths = {1f, 1f, 1f, 1f};
             table.setWidths(columnWidths);
 
