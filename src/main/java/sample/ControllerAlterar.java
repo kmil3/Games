@@ -30,16 +30,6 @@ public class ControllerAlterar implements Initializable {
 
     private ControllerVisualizar mainController;
 
-    static String nome;
-    public static void pega_id(){
-        TextInputDialog dialogoNome = new TextInputDialog();
-
-        dialogoNome.setTitle("Nome para alterar");
-        dialogoNome.setHeaderText("Informe o nome para alterar");
-        dialogoNome.setContentText("Nome:");
-        dialogoNome.showAndWait().ifPresent(v -> nome = v);
-        System.out.println(nome);
-    }
 
 
     public void voltar(ActionEvent event){
@@ -47,18 +37,6 @@ public class ControllerAlterar implements Initializable {
         primaryStage.show();
     }
 
-    @FXML
-    public void alterar(){
-        String  id = nome;
-        for (Games d : Auxiliar.le_arraylist_arquivo()) {
-            if(d.getNome() == id) {
-                d.setNome(text_nome.getText());
-                d.setDesenvolvedor(text_desenvol.getText());
-                d.setAno(data.getValue().toString());
-                d.setGenero(((RadioButton) group.getSelectedToggle()).getText());
-            }
-        }
-        }
 
 
     @Override
