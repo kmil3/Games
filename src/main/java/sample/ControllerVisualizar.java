@@ -24,7 +24,6 @@ public class ControllerVisualizar implements Initializable { //Camile weber
     @FXML
     TableView table_visualizar;
 
-
     @FXML
     ObservableList<Games> obs_games;
 

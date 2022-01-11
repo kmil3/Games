@@ -52,7 +52,6 @@ public class ControllerMain { //Camile Weber, Camile Pedrolo e Jadina
         } catch (IOException e) {
             e.printStackTrace();
         }
-        ControllerAlterar.pega_id();
         primaryStage.close();
     }
 

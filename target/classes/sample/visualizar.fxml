@@ -24,23 +24,23 @@
             <TableColumn fx:id="ano" prefWidth="81.0" text="Ano" />
         </columns>
       </TableView>
-      <Button fx:id="voltar" layoutX="53.0" layoutY="430.0" mnemonicParsing="false" onAction="#voltar" prefHeight="37.0" prefWidth="94.0" style="-fx-background-color: #77af9c;" text="Voltar" textFill="WHITE">
+      <Button fx:id="voltar" layoutX="456.0" layoutY="430.0" mnemonicParsing="false" onAction="#voltar" prefHeight="37.0" prefWidth="94.0" style="-fx-background-color: #77af9c;" text="Voltar" textFill="WHITE">
          <font>
             <Font name="Arial" size="16.0" />
          </font>
       </Button>
 
-      <Button fx:id="planilha" layoutX="277.0" layoutY="430.0" mnemonicParsing="false" onAction="#gerar_planilha" prefHeight="37.0" prefWidth="128.0" style="-fx-background-color: #77af9c;" text="Gerar Planilha" textFill="WHITE">
+      <Button fx:id="planilha" layoutX="163.0" layoutY="430.0" mnemonicParsing="false" onAction="#gerar_planilha" prefHeight="37.0" prefWidth="128.0" style="-fx-background-color: #77af9c;" text="Gerar Planilha" textFill="WHITE">
          <font>
             <Font name="Arial" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="pdf" layoutX="422.0" layoutY="430.0" mnemonicParsing="false" onAction="#gerar_pdf" prefHeight="37.0" prefWidth="128.0" style="-fx-background-color: #77af9c;" text="Gerar PDF" textFill="WHITE">
+      <Button fx:id="pdf" layoutX="311.0" layoutY="430.0" mnemonicParsing="false" onAction="#gerar_pdf" prefHeight="37.0" prefWidth="128.0" style="-fx-background-color: #77af9c;" text="Gerar PDF" textFill="WHITE">
          <font>
             <Font name="Arial" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="editar" layoutX="160.0" layoutY="430.0" mnemonicParsing="false" onAction="#editar" prefHeight="37.0" prefWidth="94.0" style="-fx-background-color: #77af9c;" text="Editar" textFill="WHITE">
+      <Button fx:id="editar" layoutX="49.0" layoutY="430.0" mnemonicParsing="false" onAction="#editar" prefHeight="37.0" prefWidth="94.0" style="-fx-background-color: #77af9c;" text="Editar" textFill="WHITE">
          <font>
             <Font name="Arial" size="16.0" />
          </font>
