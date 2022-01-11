@@ -44,34 +44,7 @@ public class ControllerVisualizar implements Initializable { //Camile weber
         primaryStage.show();
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        nome.setCellValueFactory(new PropertyValueFactory<>("nome"));
-        genero.setCellValueFactory(new PropertyValueFactory<>("genero"));
-        desenvolvedor.setCellValueFactory(new PropertyValueFactory<>("desenvolvedor"));
-        ano.setCellValueFactory(new PropertyValueFactory<>("ano"));
-        obs_games = Auxiliar.le_arquivo();
-        table_visualizar.setItems(obs_games);
 
-        dat = table_visualizar.getItems();
-
-        table_visualizar.setOnMouseClicked(e -> {
-            Games pessoa_selecionada = (Games) table_visualizar.getSelectionModel().getSelectedItem();
-
-
-            if (pessoa_selecionada != null) {
-               nome.setText(pessoa_selecionada.getNome());
-               desenvolvedor.setText(pessoa_selecionada.getDesenvolvedor());
-                genero.setText(pessoa_selecionada.getGenero());
-                ano.setText(pessoa_selecionada.getAno());
-            } else {
-                nome.setText("");
-                desenvolvedor.setText("");
-               genero.setText("");
-                ano.setText("");
-            }
-        });
-    }
     @FXML
     public void gerar_planilha() throws IOException {
         EscrevePlanilha.escrever_planilha(obs_games);
@@ -128,6 +101,35 @@ public class ControllerVisualizar implements Initializable { //Camile weber
 
     public void mostrar() {
         this.stage.show();
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        nome.setCellValueFactory(new PropertyValueFactory<>("nome"));
+        genero.setCellValueFactory(new PropertyValueFactory<>("genero"));
+        desenvolvedor.setCellValueFactory(new PropertyValueFactory<>("desenvolvedor"));
+        ano.setCellValueFactory(new PropertyValueFactory<>("ano"));
+        obs_games = Auxiliar.le_arquivo();
+        table_visualizar.setItems(obs_games);
+
+        dat = table_visualizar.getItems();
+
+        table_visualizar.setOnMouseClicked(e -> {
+            Games pessoa_selecionada = (Games) table_visualizar.getSelectionModel().getSelectedItem();
+
+
+            if (pessoa_selecionada != null) {
+                nome.setText(pessoa_selecionada.getNome());
+                desenvolvedor.setText(pessoa_selecionada.getDesenvolvedor());
+                genero.setText(pessoa_selecionada.getGenero());
+                ano.setText(pessoa_selecionada.getAno());
+            } else {
+                nome.setText("");
+                desenvolvedor.setText("");
+                genero.setText("");
+                ano.setText("");
+            }
+        });
     }
 
 }
