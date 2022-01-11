@@ -62,11 +62,10 @@ public class ControllerAlterar implements Initializable {
 
 
     public void setPerson(Games p) {
-        p.setNome(text_nome.getText());
-        p.setDesenvolvedor(text_desenvol.getText());
+        text_nome.setText(p.getNome());
+        text_desenvol.setText(p.getDesenvolvedor());
         p.setAno(data.getValue().toString());
         p.setGenero(((RadioButton) group.getSelectedToggle()).getText());
-
     }
 
     void setMainController(ControllerVisualizar aThis) {
