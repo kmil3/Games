@@ -24,8 +24,6 @@ public class ControllerVisualizar implements Initializable { //Camile weber
     @FXML
     TableView table_visualizar;
 
-    @FXML
-    public static ObservableList<Games> data;
 
     @FXML
     ObservableList<Games> obs_games;
@@ -50,7 +48,7 @@ public class ControllerVisualizar implements Initializable { //Camile weber
         obs_games = Auxiliar.le_arquivo();
         table_visualizar.setItems(obs_games);
 
-        data = table_visualizar.getItems();
+        table_visualizar.getItems();
 
         table_visualizar.setOnMouseClicked(e -> {
             Games pessoa_selecionada = (Games) table_visualizar.getSelectionModel().getSelectedItem();
