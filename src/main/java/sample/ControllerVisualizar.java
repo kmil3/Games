@@ -25,6 +25,9 @@ public class ControllerVisualizar implements Initializable { //Camile weber
     TableView table_visualizar;
 
     @FXML
+    public static ObservableList<Games> dat;
+
+    @FXML
     ObservableList<Games> obs_games;
 
     @FXML
@@ -106,6 +109,10 @@ public class ControllerVisualizar implements Initializable { //Camile weber
         } catch (IOException ex) {
             System.err.println("Erro ao abrir Janela de Edição");
         }
+    }
+
+    public void mostrar() {
+        this.stage.show();
     }
 
 }

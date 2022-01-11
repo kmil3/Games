@@ -29,7 +29,18 @@ public class ControllerAlterar implements Initializable {
     private ControllerVisualizar mainController;
 
 
+    @FXML
+    public void alterar(ActionEvent event){
+        String nome = text_nome.getText();
+        String desenvolvedor = text_desenvol.getText();
+        String dataa = data.getValue().toString();
+        String genero = data.getValue().toString();
+        ControllerVisualizar.dat.add(new Games(nome, desenvolvedor, dataa, genero));
+        mainController.mostrar();
+        text_desenvol.getScene().getWindow().hide();
+}
 
+    @FXML
     public void voltar(ActionEvent event){
         voltar.getScene().getWindow().hide();
         primaryStage.show();
