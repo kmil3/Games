@@ -23,7 +23,7 @@ import static sample.Main.primaryStage;
 
 public class ControllerVisualizar implements Initializable { //Camile weber
     @FXML
-    TableView table_visualizar;
+    TableView<Games> table_visualizar;
 
     @FXML
     public static ObservableList<Games> dat;
@@ -57,6 +57,7 @@ public class ControllerVisualizar implements Initializable { //Camile weber
 
         table_visualizar.setOnMouseClicked(e -> {
             Games pessoa_selecionada = (Games) table_visualizar.getSelectionModel().getSelectedItem();
+
 
             if (pessoa_selecionada != null) {
                nome.setText(pessoa_selecionada.getNome());
@@ -94,6 +95,7 @@ public class ControllerVisualizar implements Initializable { //Camile weber
     @FXML
     public void editar() {
         Games p = (Games) table_visualizar.getSelectionModel().getSelectedItem();
+        remove_person(p);
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("altera.fxml"));
             Parent root = loader.load();
@@ -104,13 +106,23 @@ public class ControllerVisualizar implements Initializable { //Camile weber
 
             controlador.setPerson(p);
             controlador.setMainController(ControllerVisualizar.this);
-            stage1.setTitle("Edit Person");
+            stage1.setTitle("Editar Game");
             stage1.setScene(scene);
             stage1.setAlwaysOnTop(true);
             stage1.show();
             table_visualizar.getScene().getWindow().hide();
         } catch (IOException ex) {
             System.err.println("Erro ao abrir Janela de Edição");
+        }
+    }
+
+    private void remove_person(Games pessoa_selecionada) {
+        if (pessoa_selecionada != null) {
+            dat.remove(pessoa_selecionada);
+            nome.setText("");
+            desenvolvedor.setText("");
+            genero.setText("");
+            ano.setText("");
         }
     }
 
