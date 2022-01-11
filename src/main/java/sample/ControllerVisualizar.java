@@ -20,6 +20,7 @@ import java.util.ResourceBundle;
 
 import static sample.Main.primaryStage;
 
+
 public class ControllerVisualizar implements Initializable { //Camile weber
     @FXML
     TableView table_visualizar;
@@ -32,6 +33,8 @@ public class ControllerVisualizar implements Initializable { //Camile weber
 
     @FXML
     Button voltar,planilha, pdf;
+
+    private Stage stage;
 
     @FXML
     TableColumn<Games, String> nome, genero, desenvolvedor, ano;
