@@ -34,7 +34,7 @@ public class ControllerAlterar implements Initializable {
         String nome = text_nome.getText();
         String desenvolvedor = text_desenvol.getText();
         String dataa = data.getValue().toString();
-        String genero = data.getValue().toString();
+        String genero = group.getSelectedToggle().toString();
         ControllerVisualizar.dat.add(new Games(nome, desenvolvedor, dataa, genero));
         mainController.mostrar();
         text_desenvol.getScene().getWindow().hide();
