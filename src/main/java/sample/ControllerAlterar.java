@@ -28,6 +28,8 @@ public class ControllerAlterar implements Initializable {
     @FXML
     private ToggleGroup group;
 
+    private ControllerVisualizar mainController;
+
     static String nome;
     public static void pega_id(){
         TextInputDialog dialogoNome = new TextInputDialog();
@@ -69,5 +71,18 @@ public class ControllerAlterar implements Initializable {
         group.selectedToggleProperty().addListener((ov, oldValue, newValue) -> {
         });
 
+    }
+
+
+    public void setPerson(Games p) {
+        p.setNome(text_nome.getText());
+        p.setDesenvolvedor(text_desenvol.getText());
+        p.setAno(data.getValue().toString());
+        p.setGenero(((RadioButton) group.getSelectedToggle()).getText());
+
+    }
+
+    void setMainController(ControllerVisualizar aThis) {
+        this.mainController = aThis;
     }
 }

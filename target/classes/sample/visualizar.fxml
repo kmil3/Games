@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="488.0" prefWidth="600.0" style="-fx-background-color: #fdfffc;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerVisualizar">
+<AnchorPane prefHeight="488.0" prefWidth="600.0" style="-fx-background-color: #fdfffc;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerVisualizar">
    <children>
       <Label layoutX="189.0" layoutY="14.0" prefHeight="80.0" prefWidth="175.0" text="Lista de ">
          <font>
@@ -39,6 +36,11 @@
          </font>
       </Button>
       <Button fx:id="pdf" layoutX="422.0" layoutY="430.0" mnemonicParsing="false" onAction="#gerar_pdf" prefHeight="37.0" prefWidth="128.0" style="-fx-background-color: #77af9c;" text="Gerar PDF" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="editar" layoutX="160.0" layoutY="430.0" mnemonicParsing="false" onAction="#editar" prefHeight="37.0" prefWidth="94.0" style="-fx-background-color: #77af9c;" text="Editar" textFill="WHITE">
          <font>
             <Font name="Arial" size="16.0" />
          </font>
