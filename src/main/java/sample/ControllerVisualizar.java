@@ -25,6 +25,9 @@ public class ControllerVisualizar implements Initializable { //Camile weber
     TableView table_visualizar;
 
     @FXML
+    public static ObservableList<Games> data;
+
+    @FXML
     ObservableList<Games> obs_games;
 
     @FXML
@@ -46,6 +49,24 @@ public class ControllerVisualizar implements Initializable { //Camile weber
         ano.setCellValueFactory(new PropertyValueFactory<>("ano"));
         obs_games = Auxiliar.le_arquivo();
         table_visualizar.setItems(obs_games);
+
+        data = table_visualizar.getItems();
+
+        table_visualizar.setOnMouseClicked(e -> {
+            Games pessoa_selecionada = (Games) table_visualizar.getSelectionModel().getSelectedItem();
+
+            if (pessoa_selecionada != null) {
+               nome.setText(pessoa_selecionada.getNome());
+               desenvolvedor.setText(pessoa_selecionada.getDesenvolvedor());
+                genero.setText(pessoa_selecionada.getGenero());
+                ano.setText(pessoa_selecionada.getAno());
+            } else {
+                nome.setText("");
+                desenvolvedor.setText("");
+               genero.setText("");
+                ano.setText("");
+            }
+        });
     }
     @FXML
     public void gerar_planilha() throws IOException {
