@@ -45,7 +45,7 @@ public class ControllerMain { //Camile Weber, Camile Pedrolo e Jadina
         try {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("altera.fxml")));
             Stage stage = new Stage();
-            Scene scene = new Scene(root, 600, 530);
+            Scene scene = new Scene(root, 600, 600);
             stage.setScene(scene);
             stage.show();
 

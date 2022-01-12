@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class Games implements Serializable {
+public class Games implements Serializable { //Camile weber, Camile pedrolo e jadina
     String nome, genero, desenvolvedor, ano;
     ArrayList<Games> listajogos = new ArrayList<Games>();
 

@@ -14,7 +14,7 @@ import java.util.ResourceBundle;
 
 import static sample.Main.primaryStage;
 
-public class BarChartSample implements Initializable {
+public class BarChartSample implements Initializable { //Camile weber e Camile pedrolo
 
     @FXML
     BarChart <String, Number> bar;
@@ -57,12 +57,12 @@ public class BarChartSample implements Initializable {
         series3.getData().add(new XYChart.Data("PUZZLE", PUZZLE));
 
         XYChart.Series series4 = new XYChart.Series();
-        series3.setName("FPS");
-        series3.getData().add(new XYChart.Data("FPS", FPS));
+        series4.setName("FPS");
+        series4.getData().add(new XYChart.Data("FPS", FPS));
 
 
 
-        bar.getData().addAll(series1, series2, series3);
+        bar.getData().addAll(series1, series2, series3, series4);
     }
 
     public void voltar(ActionEvent event){

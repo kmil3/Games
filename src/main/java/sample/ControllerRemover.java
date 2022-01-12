@@ -3,51 +3,59 @@ package sample;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
-import java.util.ArrayList;
-import java.util.Iterator;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+
+import java.net.URL;
+import java.util.ResourceBundle;
 
 import static sample.Main.primaryStage;
 
 
-public class ControllerRemover{ //Jadina Brummelhaus
+public class ControllerRemover implements Initializable { //Jadina Brummelhaus
     @FXML
-     Button voltar, remove;
+    TableView<Games> table_visualizar;
 
     @FXML
-    TextField remover;
+    Button voltar;
 
+    @FXML
+    ObservableList<Games> obs_games;
+
+
+    @FXML
+    TableColumn<Games, String> nome, genero, desenvolvedor, ano;
+
+
+
+    @FXML
+    public void remover(ActionEvent event){
+        Games jogo = table_visualizar.getSelectionModel().getSelectedItem();
+        obs_games.remove(jogo);
+        Auxiliar.salva_arquivo(obs_games);
+    }
+
+
+
+    @FXML
     public void voltar(ActionEvent event){
         voltar.getScene().getWindow().hide();
         primaryStage.show();
     }
 
-    @FXML
-    private void remover(ActionEvent actionEvent) {
-        if (actionEvent.getSource() == remove){
-            ObservableList<Games> listaDeGames = Auxiliar.le_arquivo();
-            Iterator<Games> listDeGames = listaDeGames.iterator();
-            int posicao = -1;
-            int i = 0;
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        nome.setCellValueFactory(new PropertyValueFactory<>("nome"));
+        genero.setCellValueFactory(new PropertyValueFactory<>("genero"));
+        desenvolvedor.setCellValueFactory(new PropertyValueFactory<>("desenvolvedor"));
+        ano.setCellValueFactory(new PropertyValueFactory<>("ano"));
+        obs_games = Auxiliar.le_arquivo();
+        table_visualizar.setItems(obs_games);
 
-            while (listDeGames.hasNext()) {
-                Games game = listDeGames.next();
-                if (remover.getText().equals(game.getNome())){
-                    posicao = i;
-                }
-                i++;
-            }
-            if (posicao == -1){
-                Alert dialogo = new Alert(Alert.AlertType.ERROR, "Game não encontrado!");
-                dialogo.showAndWait();
-            } else{
-                listaDeGames.remove(posicao);
-                Auxiliar.salva_arquivo(listaDeGames);
-                remove.getScene().getWindow().hide();
-                primaryStage.show();
-            }
-        }
+
     }
+
 }

@@ -26,13 +26,13 @@
             <Font name="Arial" size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="text_nome" layoutX="121.0" layoutY="208.0" prefHeight="25.0" prefWidth="359.0" promptText="Digite aqui..." />
+      <TextField fx:id="text_desenvol" layoutX="121.0" layoutY="208.0" prefHeight="25.0" prefWidth="359.0" promptText="Digite aqui..." />
       <Label fx:id="t11" layoutX="217.0" layoutY="176.0" prefHeight="32.0" prefWidth="200.0" text="D E S E N V O L V E D O R ">
          <font>
             <Font name="Arial" size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="text_desenvol" layoutX="121.0" layoutY="134.0" prefHeight="25.0" prefWidth="359.0" promptText="Digite aqui..." />
+      <TextField fx:id="text_nome" layoutX="121.0" layoutY="134.0" prefHeight="25.0" prefWidth="359.0" promptText="Digite aqui..." />
       <Pane layoutX="14.0" layoutY="308.0" prefHeight="212.0" prefWidth="291.0" style="-fx-background-color: #77af9c;">
          <children>
             <RadioButton fx:id="btn_moba" layoutX="22.0" layoutY="46.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="92.0" text="MOBA" textFill="WHITE">

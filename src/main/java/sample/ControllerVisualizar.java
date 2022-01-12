@@ -3,16 +3,12 @@ package sample;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
@@ -34,7 +30,6 @@ public class ControllerVisualizar implements Initializable { //Camile weber
     @FXML
     Button voltar,planilha, pdf;
 
-    private Stage stage;
 
     @FXML
     TableColumn<Games, String> nome, genero, desenvolvedor, ano;
@@ -65,43 +60,6 @@ public class ControllerVisualizar implements Initializable { //Camile weber
         dialogoInfo.showAndWait();
     }
 
-    @FXML
-    public void editar() {
-        Games p = (Games) table_visualizar.getSelectionModel().getSelectedItem();
-        remove_person(p);
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("altera.fxml"));
-            Parent root = loader.load();
-            ControllerAlterar controlador = loader.getController();
-
-            Scene scene = new Scene(root);
-            Stage stage1 = new Stage();
-
-            controlador.setPerson(p);
-            controlador.setMainController(ControllerVisualizar.this);
-            stage1.setTitle("Editar Game");
-            stage1.setScene(scene);
-            stage1.setAlwaysOnTop(true);
-            stage1.show();
-            table_visualizar.getScene().getWindow().hide();
-        } catch (IOException ex) {
-            System.err.println("Erro ao abrir Janela de Edição");
-        }
-    }
-
-    private void remove_person(Games pessoa_selecionada) {
-        if (pessoa_selecionada != null) {
-            dat.remove(pessoa_selecionada);
-            nome.setText("");
-            desenvolvedor.setText("");
-            genero.setText("");
-            ano.setText("");
-        }
-    }
-
-    public void mostrar() {
-        this.stage.show();
-    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -112,24 +70,6 @@ public class ControllerVisualizar implements Initializable { //Camile weber
         obs_games = Auxiliar.le_arquivo();
         table_visualizar.setItems(obs_games);
 
-        dat = table_visualizar.getItems();
-
-        table_visualizar.setOnMouseClicked(e -> {
-            Games pessoa_selecionada = (Games) table_visualizar.getSelectionModel().getSelectedItem();
-
-
-            if (pessoa_selecionada != null) {
-                nome.setText(pessoa_selecionada.getNome());
-                desenvolvedor.setText(pessoa_selecionada.getDesenvolvedor());
-                genero.setText(pessoa_selecionada.getGenero());
-                ano.setText(pessoa_selecionada.getAno());
-            } else {
-                nome.setText("");
-                desenvolvedor.setText("");
-                genero.setText("");
-                ano.setText("");
-            }
-        });
     }
 
 }
